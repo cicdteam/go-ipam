@@ -125,15 +125,16 @@ docker run -it --rm --entrypoint /cli ghcr.io/metal-stack/go-ipam
 
 ## Supported Databases & Performance
 
-| Database    | Acquire Child Prefix |  Acquire IP |  New Prefix | Prefix Overlap | Production-Ready | Geo-Redundant |
-|:------------|---------------------:|------------:|------------:|---------------:|:-----------------|:--------------|
-| In-Memory   |          106,861/sec | 196,687/sec | 330,578/sec |        248/sec | N                | N             |
-| KeyDB       |              777/sec |     975/sec |   2,271/sec |                | Y                | Y             |
-| Redis       |              773/sec |     958/sec |   2,349/sec |                | Y                | N             |
-| MongoDB     |              415/sec |     682/sec |     772/sec |                | Y                | Y             |
-| Etcd        |              258/sec |     368/sec |     533/sec |                | Y                | N             |
-| Postgres    |              203/sec |     331/sec |     472/sec |                | Y                | N             |
-| CockroachDB |              170/sec |     300/sec |     470/sec |                | Y                | Y             |
+| Database      | Acquire Child Prefix |  Acquire IP |  New Prefix | Prefix Overlap | Production-Ready | Geo-Redundant |
+|:--------------|---------------------:|------------:|------------:|---------------:|:-----------------|:--------------|
+| In-Memory     |          106,861/sec | 196,687/sec | 330,578/sec |        248/sec | N                | N             |
+| KeyDB         |              777/sec |     975/sec |   2,271/sec |                | Y                | Y             |
+| Redis         |              773/sec |     958/sec |   2,349/sec |                | Y                | N             |
+| MongoDB       |              415/sec |     682/sec |     772/sec |                | Y                | Y             |
+| Etcd          |              258/sec |     368/sec |     533/sec |                | Y                | N             |
+| Postgres      |              203/sec |     331/sec |     472/sec |                | Y                | N             |
+| CockroachDB   |              170/sec |     300/sec |     470/sec |                | Y                | Y             |
+| k8s ConfigMap |              N/A     |     N/A     |     N/A     |                | Y                | Y             |
 
 The benchmarks above were performed using:
 
