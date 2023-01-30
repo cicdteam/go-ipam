@@ -11,7 +11,6 @@ require (
 	github.com/jmoiron/sqlx v1.3.5
 	github.com/klauspost/connect-compress v1.0.0
 	github.com/lib/pq v1.10.7
-	github.com/metal-stack/go-ipam v1.11.4
 	github.com/metal-stack/v v1.0.3
 	github.com/stretchr/testify v1.8.1
 	github.com/testcontainers/testcontainers-go v0.15.0

@@ -5,9 +5,9 @@ import (
 	"time"
 
 	compress "github.com/klauspost/connect-compress"
-	goipam "github.com/metal-stack/go-ipam"
-	"github.com/metal-stack/go-ipam/api/v1/apiv1connect"
-	"github.com/metal-stack/go-ipam/pkg/service"
+	goipam "github.com/cicdteam/go-ipam"
+	"github.com/cicdteam/go-ipam/api/v1/apiv1connect"
+	"github.com/cicdteam/go-ipam/pkg/service"
 	"github.com/metal-stack/v"
 
 	grpchealth "github.com/bufbuild/connect-grpchealth-go"

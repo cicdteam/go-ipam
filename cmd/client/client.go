@@ -8,8 +8,8 @@ import (
 
 	"github.com/bufbuild/connect-go"
 	compress "github.com/klauspost/connect-compress"
-	v1 "github.com/metal-stack/go-ipam/api/v1"
-	"github.com/metal-stack/go-ipam/api/v1/apiv1connect"
+	v1 "github.com/cicdteam/go-ipam/api/v1"
+	"github.com/cicdteam/go-ipam/api/v1/apiv1connect"
 	"github.com/metal-stack/v"
 	"github.com/urfave/cli/v2"
 )

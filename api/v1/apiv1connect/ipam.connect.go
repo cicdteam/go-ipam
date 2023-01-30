@@ -8,7 +8,7 @@ import (
 	context "context"
 	errors "errors"
 	connect_go "github.com/bufbuild/connect-go"
-	v1 "github.com/metal-stack/go-ipam/api/v1"
+	v1 "github.com/cicdteam/go-ipam/api/v1"
 	http "net/http"
 	strings "strings"
 )

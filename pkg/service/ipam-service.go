@@ -7,8 +7,8 @@ import (
 	"net/netip"
 
 	"github.com/bufbuild/connect-go"
-	goipam "github.com/metal-stack/go-ipam"
-	v1 "github.com/metal-stack/go-ipam/api/v1"
+	goipam "github.com/cicdteam/go-ipam"
+	v1 "github.com/cicdteam/go-ipam/api/v1"
 	"go.uber.org/zap"
 )
 

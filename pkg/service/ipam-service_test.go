@@ -8,9 +8,9 @@ import (
 	"testing"
 
 	"github.com/bufbuild/connect-go"
-	goipam "github.com/metal-stack/go-ipam"
-	v1 "github.com/metal-stack/go-ipam/api/v1"
-	"github.com/metal-stack/go-ipam/api/v1/apiv1connect"
+	goipam "github.com/cicdteam/go-ipam"
+	v1 "github.com/cicdteam/go-ipam/api/v1"
+	"github.com/cicdteam/go-ipam/api/v1/apiv1connect"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"go.uber.org/zap/zaptest"

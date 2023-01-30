@@ -8,7 +8,7 @@ Example usage:
 
 		import (
 			"fmt"
-			goipam "github.com/metal-stack/go-ipam"
+			goipam "github.com/cicdteam/go-ipam"
 		)
 
 
