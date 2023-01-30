@@ -32,7 +32,7 @@ test:
 
 .PHONY: fuzz
 fuzz:
-	CGO_ENABLED=1 $(GO) test -fuzz=Fuzz -v -run ^Fuzz github.com/metal-stack/go-ipam 
+	CGO_ENABLED=1 $(GO) test -fuzz=Fuzz -v -run ^Fuzz github.com/cicdteam/go-ipam
 
 .PHONY: golangcicheck
 golangcicheck:
@@ -53,7 +53,7 @@ server:
 								   -X 'github.com/metal-stack/v.Revision=$(GITVERSION)' \
 								   -X 'github.com/metal-stack/v.GitSHA1=$(SHA)' \
 								   -X 'github.com/metal-stack/v.BuildDate=$(BUILDDATE)'" \
-	   -o bin/server github.com/metal-stack/go-ipam/cmd/server
+	   -o bin/server github.com/cicdteam/go-ipam/cmd/server
 	strip bin/server
 
 .PHONY: client
@@ -63,7 +63,7 @@ client:
 								   -X 'github.com/metal-stack/v.Revision=$(GITVERSION)' \
 								   -X 'github.com/metal-stack/v.GitSHA1=$(SHA)' \
 								   -X 'github.com/metal-stack/v.BuildDate=$(BUILDDATE)'" \
-	   -o bin/cli github.com/metal-stack/go-ipam/cmd/client
+	   -o bin/cli github.com/cicdteam/go-ipam/cmd/client
 	strip bin/cli
 
 .PHONY: postgres-up

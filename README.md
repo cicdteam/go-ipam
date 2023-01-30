@@ -1,10 +1,10 @@
 # go-ipam
 
-[![Actions](https://github.com/metal-stack/go-ipam/workflows/build/badge.svg)](https://github.com/metal-stack/go-ipam/actions)
-[![GoDoc](https://godoc.org/github.com/metal-stack/go-ipam?status.svg)](https://godoc.org/github.com/metal-stack/go-ipam)
-[![Go Report Card](https://goreportcard.com/badge/github.com/metal-stack/go-ipam)](https://goreportcard.com/report/github.com/metal-stack/go-ipam)
-[![codecov](https://codecov.io/gh/metal-stack/go-ipam/branch/master/graph/badge.svg)](https://codecov.io/gh/metal-stack/go-ipam)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/metal-stack/go-ipam/blob/master/LICENSE)
+[![Actions](https://github.com/cicdteam/go-ipam/workflows/build/badge.svg)](https://github.com/cicdteam/go-ipam/actions)
+[![GoDoc](https://godoc.org/github.com/cicdteam/go-ipam?status.svg)](https://godoc.org/github.com/cicdteam/go-ipam)
+[![Go Report Card](https://goreportcard.com/badge/github.com/cicdteam/go-ipam)](https://goreportcard.com/report/github.com/cicdteam/go-ipam)
+[![codecov](https://codecov.io/gh/cicdteam/go-ipam/branch/master/graph/badge.svg)](https://codecov.io/gh/cicdteam/go-ipam)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/cicdteam/go-ipam/blob/master/LICENSE)
 
 go-ipam is a module to handle IP address management. It can operate on networks, prefixes and IPs.
 
@@ -28,7 +28,7 @@ package main
 import (
     "fmt"
     "time"
-    goipam "github.com/metal-stack/go-ipam"
+    goipam "github.com/cicdteam/go-ipam"
 )
 
 func main() {
@@ -82,7 +82,7 @@ func main() {
 First start the go-ipam container with the database backend of your choice already up and running. For example if you have a postgres database for storing the ipam data, you could run the grpc service like so:
 
 ```bash
-docker run -it --rm ghcr.io/metal-stack/go-ipam postgres
+docker run -it --rm ghcr.io/cicdteam/go-ipam postgres
 ```
 
 From a client perspective you can now talk to this service via grpc.
@@ -96,8 +96,8 @@ import (
     "http"
 
     "github.com/bufbuild/connect-go"
-    v1 "github.com/metal-stack/go-ipam/api/v1"
-    "github.com/metal-stack/go-ipam/api/v1/apiv1connect"
+    v1 "github.com/cicdteam/go-ipam/api/v1"
+    "github.com/cicdteam/go-ipam/api/v1/apiv1connect"
 )
 func main() {
 
@@ -120,7 +120,7 @@ func main() {
 There is also a `cli` provided in the container which can be used to make calls to the grpc endpoint manually:
 
 ```bash
-docker run -it --rm --entrypoint /cli ghcr.io/metal-stack/go-ipam
+docker run -it --rm --entrypoint /cli ghcr.io/cicdteam/go-ipam
 ```
 
 ## Supported Databases & Performance

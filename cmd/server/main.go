@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	goipam "github.com/metal-stack/go-ipam"
+	goipam "github.com/cicdteam/go-ipam"
 	"github.com/metal-stack/v"
 	"github.com/urfave/cli/v2"
 	"go.mongodb.org/mongo-driver/mongo/options"
@@ -257,6 +257,33 @@ func main() {
 					}
 					c.Storage = db
 
+					s := newServer(c)
+					return s.Run()
+				},
+			},
+			{
+				Name:  "configmap",
+				Aliases: []string{"cm"},
+				Usage: "start with k8s ConfigMap backend",
+				Flags: []cli.Flag{
+					&cli.StringFlag{
+						Name:    "name",
+						Value:   "goipam",
+						Usage:   "k8s ConfigMap name where ipam data stored",
+						EnvVars: []string{"GOIPAM_CONFIGMAP_NAME"},
+					},
+					&cli.BoolFlag{
+						Name:    "cache",
+						Usage:   "cache queries to k8s ConfigMap",
+						Value:   false,
+						EnvVars: []string{"GOIPAM_CONFIGMAP_CACHE"},
+					},
+				},
+				Action: func(ctx *cli.Context) error {
+					c := getConfig(ctx)
+					name := ctx.String("name")
+					cache := ctx.Bool("cache")
+					c.Storage = goipam.NewConfigmap(name, cache)
 					s := newServer(c)
 					return s.Run()
 				},
